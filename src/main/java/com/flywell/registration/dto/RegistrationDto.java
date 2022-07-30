@@ -1,12 +1,21 @@
 package com.flywell.registration.dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class RegistrationDto {
 
+    @NotBlank
     private String firstName;
+    @NotBlank
     private String lastName;
     private String username;
+    @NotBlank
     private String password;
+    @Size(min = 10, max = 10)
     private String mobileNo;
+    @Email
     private String email;
 
     public String getPassword() {

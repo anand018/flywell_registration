@@ -21,6 +21,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     public void register(RegistrationDto registrationDto) {
 
         RegistrationEntity registrationEntity = registrationMapper.dtoToEntity(registrationDto);
+
         registrationRepo.save(registrationEntity);
     }
 }
